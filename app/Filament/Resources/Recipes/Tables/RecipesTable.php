@@ -16,12 +16,14 @@ class RecipesTable
         return $table
             ->columns([
                 TextColumn::make('name')
-                    ->searchable(),
-                TextColumn::make('excerpt'),
+                    ->searchable()
+                    ->toggleable(),
+                TextColumn::make('excerpt')
+                    ->toggleable(),
                 TextColumn::make('created_at')
                     ->dateTime()
                     ->sortable()
-                    ->toggleable(isToggledHiddenByDefault: true),
+                    ->toggleable(),
                 TextColumn::make('updated_at')
                     ->dateTime()
                     ->sortable()
