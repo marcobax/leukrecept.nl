@@ -9,4 +9,10 @@ class Recipe extends Model
 {
     /** @use HasFactory<\Database\Factories\RecipeFactory> */
     use HasFactory;
+
+    protected $fillable = [
+        'name',
+        'excerpt',
+        'content',
+    ];
 }

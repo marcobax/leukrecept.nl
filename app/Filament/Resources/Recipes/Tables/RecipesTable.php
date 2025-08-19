@@ -17,6 +17,7 @@ class RecipesTable
             ->columns([
                 TextColumn::make('name')
                     ->searchable(),
+                TextColumn::make('excerpt'),
                 TextColumn::make('created_at')
                     ->dateTime()
                     ->sortable()
